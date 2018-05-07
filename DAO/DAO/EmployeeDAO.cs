@@ -75,5 +75,13 @@ namespace DAO
             return 1;
         }
 
+        public DataTable BestEmployee(string start, string end)
+        {
+            string query = $"EXEC dbo.BestEmployee @start = '{start}', @end = '{end}'";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
+            return data;
+        }
+
     }
 }

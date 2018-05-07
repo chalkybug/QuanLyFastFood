@@ -58,6 +58,14 @@ namespace DAO
             return value;
         }
 
+        public DataTable ShowBillPaid(string start, string end)
+        {
+            string query = $"exec ShowBillPaid '{start}' ,'{end}'";
+            DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+            
+            return dt;
+        }
+
 
 
     }

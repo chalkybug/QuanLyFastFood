@@ -123,6 +123,14 @@ namespace FastFoodDemo
         private void button4_Click(object sender, EventArgs e)
         {
             CheckAdmin();
+            if (isAdmin)
+            {
+                Statistical uc = new Statistical();
+                uc.Dock = DockStyle.Fill;
+                pnlMain.Controls.Clear();
+                pnlMain.Controls.Add(uc);
+
+            }
         }
     }
 }

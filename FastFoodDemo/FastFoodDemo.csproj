@@ -66,10 +66,10 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="MySecondCustmControl.cs">
+    <Compile Include="UCs\MySecondCustmControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="MySecondCustmControl.Designer.cs">
+    <Compile Include="UCs\MySecondCustmControl.Designer.cs">
       <DependentUpon>MySecondCustmControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -79,6 +79,12 @@
     </Compile>
     <Compile Include="UCs\Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCs\Statistical.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCs\Statistical.Designer.cs">
+      <DependentUpon>Statistical.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Forrms\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
@@ -92,7 +98,7 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MySecondCustmControl.resx">
+    <EmbeddedResource Include="UCs\MySecondCustmControl.resx">
       <DependentUpon>MySecondCustmControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -105,6 +111,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UCs\Statistical.resx">
+      <DependentUpon>Statistical.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -122,6 +131,10 @@
     <ProjectReference Include="..\BUS\BUS.csproj">
       <Project>{3adca80b-4ccf-4536-850d-0809992d0906}</Project>
       <Name>BUS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAO\DAO.csproj">
+      <Project>{AA42C69A-EBF9-4E73-AEA4-706B643F5C73}</Project>
+      <Name>DAO</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

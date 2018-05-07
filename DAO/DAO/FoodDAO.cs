@@ -88,6 +88,12 @@ namespace DAO
             return data;
         }
 
+        public DataTable PopularFood(string start, string end)
+        {
+            string query = $"EXEC dbo.PopularFood @start = '{start}', @end = '{end}'";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
 
+            return data;
+        }
     }
 }
