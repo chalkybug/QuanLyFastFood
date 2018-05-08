@@ -1,4 +1,4 @@
-﻿create database BanDoAnNhanh
+﻿CREATE database BanDoAnNhanh
 go
 use BanDoAnNhanh
 go

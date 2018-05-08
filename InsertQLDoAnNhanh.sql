@@ -80,7 +80,7 @@ GO
 INSERT dbo.Employee VALUES  ( N'Hoàng Thanh Thúy', -- name - nvarchar(100)
           '0934234232', -- phone - varchar(11)
           N'Hà nội', -- address - nvarchar(100)
-         	  0,
+         	  0
 		 
           )
 
@@ -88,7 +88,7 @@ INSERT dbo.Employee
 VALUES  ( N'Hoàng Đức Mập', -- name - nvarchar(100)
           '0934234232', -- phone - varchar(11)
           N'Hà nội', -- address - nvarchar(100)
-          0,
+          0
 		 
           )
 
@@ -96,7 +96,7 @@ INSERT dbo.Employee
 VALUES  ( N'Nguyễn Thanh Thúy', -- name - nvarchar(100)
           '0934234232', -- phone - varchar(11)
           N'Hà nội', -- address - nvarchar(100)
-			  0,
+			  0
 		  
           )
 
@@ -104,7 +104,7 @@ INSERT dbo.Employee
 VALUES  ( N'Lưu Thanh Hải', -- name - nvarchar(100)
           '0934234232', -- phone - varchar(11)
           N'Hà nội', -- address - nvarchar(100)
-        0,
+        0
 		 
           )
 
