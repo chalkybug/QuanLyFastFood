@@ -34,20 +34,19 @@
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.txtSearch = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
-            this.btnCoupon = new DevComponents.DotNetBar.ButtonX();
             this.txtCoupon = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.btnPayment = new DevComponents.DotNetBar.ButtonX();
             this.txtPayment = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.btnAddFood = new DevComponents.DotNetBar.ButtonX();
             this.btnDelFood = new DevComponents.DotNetBar.ButtonX();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtEmp = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.labelX3 = new DevComponents.DotNetBar.LabelX();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridViewX2 = new DevComponents.DotNetBar.Controls.DataGridViewX();
             this.panel4 = new System.Windows.Forms.Panel();
             this.dataGridViewX1 = new DevComponents.DotNetBar.Controls.DataGridViewX();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.labelX3 = new DevComponents.DotNetBar.LabelX();
-            this.txtEmp = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -93,17 +92,6 @@
             this.labelX2.Size = new System.Drawing.Size(75, 23);
             this.labelX2.TabIndex = 11;
             this.labelX2.Text = "Khuyến Mãi";
-            // 
-            // btnCoupon
-            // 
-            this.btnCoupon.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnCoupon.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnCoupon.Location = new System.Drawing.Point(733, 19);
-            this.btnCoupon.Name = "btnCoupon";
-            this.btnCoupon.Size = new System.Drawing.Size(75, 23);
-            this.btnCoupon.TabIndex = 10;
-            this.btnCoupon.Text = "Áp Dụng";
-            this.btnCoupon.Click += new System.EventHandler(this.buttonX1_Click);
             // 
             // txtCoupon
             // 
@@ -167,7 +155,6 @@
             this.panel1.Controls.Add(this.labelX3);
             this.panel1.Controls.Add(this.labelX2);
             this.panel1.Controls.Add(this.btnPayment);
-            this.panel1.Controls.Add(this.btnCoupon);
             this.panel1.Controls.Add(this.txtPayment);
             this.panel1.Controls.Add(this.txtCoupon);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -175,6 +162,25 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1089, 65);
             this.panel1.TabIndex = 5;
+            // 
+            // txtEmp
+            // 
+            // 
+            // 
+            // 
+            this.txtEmp.Border.Class = "TextBoxBorder";
+            this.txtEmp.Location = new System.Drawing.Point(335, 21);
+            this.txtEmp.Name = "txtEmp";
+            this.txtEmp.Size = new System.Drawing.Size(147, 22);
+            this.txtEmp.TabIndex = 15;
+            // 
+            // labelX3
+            // 
+            this.labelX3.Location = new System.Drawing.Point(257, 19);
+            this.labelX3.Name = "labelX3";
+            this.labelX3.Size = new System.Drawing.Size(234, 23);
+            this.labelX3.TabIndex = 14;
+            this.labelX3.Text = "Nhân Viên";
             // 
             // panel3
             // 
@@ -236,25 +242,6 @@
             this.dataGridViewX1.Size = new System.Drawing.Size(463, 372);
             this.dataGridViewX1.TabIndex = 5;
             // 
-            // labelX3
-            // 
-            this.labelX3.Location = new System.Drawing.Point(257, 19);
-            this.labelX3.Name = "labelX3";
-            this.labelX3.Size = new System.Drawing.Size(234, 23);
-            this.labelX3.TabIndex = 14;
-            this.labelX3.Text = "Nhân Viên";
-            // 
-            // txtEmp
-            // 
-            // 
-            // 
-            // 
-            this.txtEmp.Border.Class = "TextBoxBorder";
-            this.txtEmp.Location = new System.Drawing.Point(335, 21);
-            this.txtEmp.Name = "txtEmp";
-            this.txtEmp.Size = new System.Drawing.Size(147, 22);
-            this.txtEmp.TabIndex = 15;
-            // 
             // MySecondCustmControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -289,7 +276,6 @@
         private DevComponents.DotNetBar.Controls.DataGridViewX dataGridViewX1;
         private DevComponents.DotNetBar.Controls.DataGridViewX dataGridViewX2;
         private DevComponents.DotNetBar.ButtonX btnPayment;
-        private DevComponents.DotNetBar.ButtonX btnCoupon;
         private DevComponents.DotNetBar.Controls.TextBoxX txtCoupon;
         private DevComponents.DotNetBar.Controls.TextBoxX txtPayment;
         private DevComponents.DotNetBar.LabelX labelX1;

@@ -73,6 +73,7 @@ namespace FastFoodDemo
             // thêm bill rồi thêm billdetails theo id
             int idEmployee = int.Parse(txtEmp.Text);
             BillBUS.Instance.Add(txtCoupon.Text, idEmployee, dt);
+
             int idBill = BillBUS.Instance.GetMaxBill();
             for (int i = 0; i < dataGridViewX2.Rows.Count - 1; i++)
             {
@@ -81,12 +82,7 @@ namespace FastFoodDemo
                 BillDetailsBUS.Instance.Add(idBill, idFood, 1);
 
             }
-            string res = $"Số tiền phải trả là: {txtPayment.Text} vnđ ";
-            MessageBox.Show(res);
-        }
-
-        private void buttonX1_Click(object sender, EventArgs e)
-        {
+            string res = "";
             if (CouponBUS.Instance.Check(txtCoupon.Text))
             {
                 float price = float.Parse(txtPayment.Text);
@@ -94,13 +90,33 @@ namespace FastFoodDemo
                 float value = float.Parse(coupon);
                 float totalPrice = price - (price * (value / 100));
                 txtPayment.Text = totalPrice.ToString();
-                btnCoupon.Enabled = false;
-                MessageBox.Show($"Đã áp dụng thành công khuyến mãi {coupon}%");
+                //btnCoupon.Enabled = false;
+                res = $"Đã áp dụng thành công khuyến mãi {coupon}% số tiền cần trả là {txtPayment.Text} vnđ";
             }
             else
             {
-                MessageBox.Show("Áp Dụng không thành công");
+                res = $"Số tiền phải trả là: {txtPayment.Text} vnđ ";
             }
+
+            MessageBox.Show(res);
+        }
+
+        private void buttonX1_Click(object sender, EventArgs e)
+        {
+            //if (CouponBUS.Instance.Check(txtCoupon.Text))
+            //{
+            //    float price = float.Parse(txtPayment.Text);
+            //    string coupon = CouponBUS.Instance.GetValueByID(txtCoupon.Text);
+            //    float value = float.Parse(coupon);
+            //    float totalPrice = price - (price * (value / 100));
+            //    txtPayment.Text = totalPrice.ToString();
+            //    //btnCoupon.Enabled = false;
+            //    MessageBox.Show($"Đã áp dụng thành công khuyến mãi {coupon}%");
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Áp Dụng không thành công");
+            //}
         }
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
