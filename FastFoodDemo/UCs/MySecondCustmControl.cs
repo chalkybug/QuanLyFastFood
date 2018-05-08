@@ -71,7 +71,7 @@ namespace FastFoodDemo
         {
             DateTime dt = (DateTime.Parse(DateTime.Now.ToShortDateString()));
             // thêm bill rồi thêm billdetails theo id
-            int idEmployee = 3;
+            int idEmployee = int.Parse(txtEmp.Text);
             BillBUS.Instance.Add(txtCoupon.Text, idEmployee, dt);
             int idBill = BillBUS.Instance.GetMaxBill();
             for (int i = 0; i < dataGridViewX2.Rows.Count - 1; i++)

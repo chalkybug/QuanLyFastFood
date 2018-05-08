@@ -31,10 +31,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.labelX2 = new DevComponents.DotNetBar.LabelX();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
-            this.btnCoupon = new DevComponents.DotNetBar.ButtonX();
             this.txtSearch = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.labelX2 = new DevComponents.DotNetBar.LabelX();
+            this.btnCoupon = new DevComponents.DotNetBar.ButtonX();
             this.txtCoupon = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.btnPayment = new DevComponents.DotNetBar.ButtonX();
             this.txtPayment = new DevComponents.DotNetBar.Controls.TextBoxX();
@@ -46,6 +46,8 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.dataGridViewX1 = new DevComponents.DotNetBar.Controls.DataGridViewX();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.labelX3 = new DevComponents.DotNetBar.LabelX();
+            this.txtEmp = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -64,14 +66,6 @@
             this.panel2.Size = new System.Drawing.Size(1089, 63);
             this.panel2.TabIndex = 1;
             // 
-            // labelX2
-            // 
-            this.labelX2.Location = new System.Drawing.Point(497, 19);
-            this.labelX2.Name = "labelX2";
-            this.labelX2.Size = new System.Drawing.Size(75, 23);
-            this.labelX2.TabIndex = 11;
-            this.labelX2.Text = "Khuyến Mãi";
-            // 
             // labelX1
             // 
             this.labelX1.Location = new System.Drawing.Point(24, 19);
@@ -79,17 +73,6 @@
             this.labelX1.Size = new System.Drawing.Size(75, 23);
             this.labelX1.TabIndex = 1;
             this.labelX1.Text = "Tìm Kiếm";
-            // 
-            // btnCoupon
-            // 
-            this.btnCoupon.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnCoupon.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnCoupon.Location = new System.Drawing.Point(733, 19);
-            this.btnCoupon.Name = "btnCoupon";
-            this.btnCoupon.Size = new System.Drawing.Size(75, 23);
-            this.btnCoupon.TabIndex = 10;
-            this.btnCoupon.Text = "Áp Dụng";
-            this.btnCoupon.Click += new System.EventHandler(this.buttonX1_Click);
             // 
             // txtSearch
             // 
@@ -102,6 +85,25 @@
             this.txtSearch.Size = new System.Drawing.Size(191, 22);
             this.txtSearch.TabIndex = 0;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
+            // 
+            // labelX2
+            // 
+            this.labelX2.Location = new System.Drawing.Point(497, 19);
+            this.labelX2.Name = "labelX2";
+            this.labelX2.Size = new System.Drawing.Size(75, 23);
+            this.labelX2.TabIndex = 11;
+            this.labelX2.Text = "Khuyến Mãi";
+            // 
+            // btnCoupon
+            // 
+            this.btnCoupon.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnCoupon.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnCoupon.Location = new System.Drawing.Point(733, 19);
+            this.btnCoupon.Name = "btnCoupon";
+            this.btnCoupon.Size = new System.Drawing.Size(75, 23);
+            this.btnCoupon.TabIndex = 10;
+            this.btnCoupon.Text = "Áp Dụng";
+            this.btnCoupon.Click += new System.EventHandler(this.buttonX1_Click);
             // 
             // txtCoupon
             // 
@@ -161,6 +163,8 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.txtEmp);
+            this.panel1.Controls.Add(this.labelX3);
             this.panel1.Controls.Add(this.labelX2);
             this.panel1.Controls.Add(this.btnPayment);
             this.panel1.Controls.Add(this.btnCoupon);
@@ -232,6 +236,25 @@
             this.dataGridViewX1.Size = new System.Drawing.Size(463, 372);
             this.dataGridViewX1.TabIndex = 5;
             // 
+            // labelX3
+            // 
+            this.labelX3.Location = new System.Drawing.Point(257, 19);
+            this.labelX3.Name = "labelX3";
+            this.labelX3.Size = new System.Drawing.Size(234, 23);
+            this.labelX3.TabIndex = 14;
+            this.labelX3.Text = "Nhân Viên";
+            // 
+            // txtEmp
+            // 
+            // 
+            // 
+            // 
+            this.txtEmp.Border.Class = "TextBoxBorder";
+            this.txtEmp.Location = new System.Drawing.Point(335, 21);
+            this.txtEmp.Name = "txtEmp";
+            this.txtEmp.Size = new System.Drawing.Size(147, 22);
+            this.txtEmp.TabIndex = 15;
+            // 
             // MySecondCustmControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -272,5 +295,7 @@
         private DevComponents.DotNetBar.LabelX labelX1;
         private DevComponents.DotNetBar.LabelX labelX2;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtEmp;
+        private DevComponents.DotNetBar.LabelX labelX3;
     }
 }

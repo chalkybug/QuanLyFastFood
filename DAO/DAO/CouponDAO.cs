@@ -72,6 +72,18 @@ namespace DAO
             return 1;
         }
 
+        public string GetValueByID(string id)
+        {
+            string query = $"SELECT * FROM dbo.Coupon WHERE id='{id}'";
+            Coupon coupon = null;
+            DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+            foreach (DataRow item in dt.Rows)
+            {
+                coupon = new Coupon(item);
+            }
+            return coupon.value;
+        }
+
 
     }
 }

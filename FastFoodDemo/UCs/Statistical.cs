@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DAO;
+using BUS;
 
 namespace FastFoodDemo.UCs
 {
@@ -24,7 +25,7 @@ namespace FastFoodDemo.UCs
         {
             string start = dateTimePicker1.Value.ToString("yyyy-MM-dd");
             string end = dateTimePicker2.Value.ToString("yyyy-MM-dd");
-            dataGridViewX1.DataSource = BillDAO.Instance.ShowBillPaid(start,end);
+            dataGridViewX1.DataSource = BillBUS.Instance.ShowBillPaid(start,end);
             dataGridViewX2.DataSource = EmployeeDAO.Instance.BestEmployee(start, end);
             dataGridViewX3.DataSource = FoodDAO.Instance.PopularFood(start, end);
         }

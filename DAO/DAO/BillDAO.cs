@@ -37,7 +37,7 @@ namespace DAO
         }
         public int Add(string idCoupon, int cashier, DateTime paymentTime)
         {
-            string query = $"EXEC dbo.InsertBill @idCoupon = '',  @idEmp = 0, @paymentTime = ''";
+            string query = $"EXEC dbo.InsertBill @idCoupon = '{idCoupon}',  @idEmp = {cashier}, @paymentTime = '{paymentTime}'";
 
             DataProvider.Instance.ExecuteNonQuery(query);
 
