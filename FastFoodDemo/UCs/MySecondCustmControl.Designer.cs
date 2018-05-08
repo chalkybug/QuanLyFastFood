@@ -28,25 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.txtSearch = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.btnAddFood = new DevComponents.DotNetBar.ButtonX();
-            this.btnDelFood = new DevComponents.DotNetBar.ButtonX();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.labelX2 = new DevComponents.DotNetBar.LabelX();
+            this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.btnCoupon = new DevComponents.DotNetBar.ButtonX();
+            this.txtSearch = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.txtCoupon = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.btnPayment = new DevComponents.DotNetBar.ButtonX();
             this.txtPayment = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.btnAddFood = new DevComponents.DotNetBar.ButtonX();
+            this.btnDelFood = new DevComponents.DotNetBar.ButtonX();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridViewX2 = new DevComponents.DotNetBar.Controls.DataGridViewX();
             this.panel4 = new System.Windows.Forms.Panel();
             this.dataGridViewX1 = new DevComponents.DotNetBar.Controls.DataGridViewX();
-            this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.labelX2 = new DevComponents.DotNetBar.LabelX();
             this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewX2)).BeginInit();
             this.panel4.SuspendLayout();
@@ -55,18 +56,40 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.labelX2);
             this.panel2.Controls.Add(this.labelX1);
-            this.panel2.Controls.Add(this.btnCoupon);
             this.panel2.Controls.Add(this.txtSearch);
-            this.panel2.Controls.Add(this.txtCoupon);
-            this.panel2.Controls.Add(this.btnPayment);
-            this.panel2.Controls.Add(this.txtPayment);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1089, 63);
             this.panel2.TabIndex = 1;
+            // 
+            // labelX2
+            // 
+            this.labelX2.Location = new System.Drawing.Point(497, 19);
+            this.labelX2.Name = "labelX2";
+            this.labelX2.Size = new System.Drawing.Size(75, 23);
+            this.labelX2.TabIndex = 11;
+            this.labelX2.Text = "Khuyến Mãi";
+            // 
+            // labelX1
+            // 
+            this.labelX1.Location = new System.Drawing.Point(24, 19);
+            this.labelX1.Name = "labelX1";
+            this.labelX1.Size = new System.Drawing.Size(75, 23);
+            this.labelX1.TabIndex = 1;
+            this.labelX1.Text = "Tìm Kiếm";
+            // 
+            // btnCoupon
+            // 
+            this.btnCoupon.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnCoupon.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnCoupon.Location = new System.Drawing.Point(733, 19);
+            this.btnCoupon.Name = "btnCoupon";
+            this.btnCoupon.Size = new System.Drawing.Size(75, 23);
+            this.btnCoupon.TabIndex = 10;
+            this.btnCoupon.Text = "Áp Dụng";
+            this.btnCoupon.Click += new System.EventHandler(this.buttonX1_Click);
             // 
             // txtSearch
             // 
@@ -74,11 +97,45 @@
             // 
             // 
             this.txtSearch.Border.Class = "TextBoxBorder";
-            this.txtSearch.Location = new System.Drawing.Point(105, 19);
+            this.txtSearch.Location = new System.Drawing.Point(87, 21);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(191, 22);
             this.txtSearch.TabIndex = 0;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
+            // 
+            // txtCoupon
+            // 
+            // 
+            // 
+            // 
+            this.txtCoupon.Border.Class = "TextBoxBorder";
+            this.txtCoupon.Location = new System.Drawing.Point(578, 19);
+            this.txtCoupon.Name = "txtCoupon";
+            this.txtCoupon.Size = new System.Drawing.Size(147, 22);
+            this.txtCoupon.TabIndex = 9;
+            // 
+            // btnPayment
+            // 
+            this.btnPayment.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnPayment.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnPayment.Location = new System.Drawing.Point(977, 19);
+            this.btnPayment.Name = "btnPayment";
+            this.btnPayment.Size = new System.Drawing.Size(93, 23);
+            this.btnPayment.TabIndex = 8;
+            this.btnPayment.Text = "Thanh Toán";
+            this.btnPayment.Click += new System.EventHandler(this.btnPayment_Click);
+            // 
+            // txtPayment
+            // 
+            // 
+            // 
+            // 
+            this.txtPayment.Border.Class = "TextBoxBorder";
+            this.txtPayment.Location = new System.Drawing.Point(824, 19);
+            this.txtPayment.Name = "txtPayment";
+            this.txtPayment.ReadOnly = true;
+            this.txtPayment.Size = new System.Drawing.Size(147, 22);
+            this.txtPayment.TabIndex = 0;
             // 
             // btnAddFood
             // 
@@ -104,56 +161,16 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.labelX2);
+            this.panel1.Controls.Add(this.btnPayment);
+            this.panel1.Controls.Add(this.btnCoupon);
+            this.panel1.Controls.Add(this.txtPayment);
+            this.panel1.Controls.Add(this.txtCoupon);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 435);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1089, 65);
             this.panel1.TabIndex = 5;
-            // 
-            // btnCoupon
-            // 
-            this.btnCoupon.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnCoupon.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnCoupon.Location = new System.Drawing.Point(599, 19);
-            this.btnCoupon.Name = "btnCoupon";
-            this.btnCoupon.Size = new System.Drawing.Size(75, 23);
-            this.btnCoupon.TabIndex = 10;
-            this.btnCoupon.Text = "Áp Dụng";
-            this.btnCoupon.Click += new System.EventHandler(this.buttonX1_Click);
-            // 
-            // txtCoupon
-            // 
-            // 
-            // 
-            // 
-            this.txtCoupon.Border.Class = "TextBoxBorder";
-            this.txtCoupon.Location = new System.Drawing.Point(444, 19);
-            this.txtCoupon.Name = "txtCoupon";
-            this.txtCoupon.Size = new System.Drawing.Size(147, 22);
-            this.txtCoupon.TabIndex = 9;
-            // 
-            // btnPayment
-            // 
-            this.btnPayment.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnPayment.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnPayment.Location = new System.Drawing.Point(915, 18);
-            this.btnPayment.Name = "btnPayment";
-            this.btnPayment.Size = new System.Drawing.Size(93, 23);
-            this.btnPayment.TabIndex = 8;
-            this.btnPayment.Text = "Thanh Toán";
-            this.btnPayment.Click += new System.EventHandler(this.btnPayment_Click);
-            // 
-            // txtPayment
-            // 
-            // 
-            // 
-            // 
-            this.txtPayment.Border.Class = "TextBoxBorder";
-            this.txtPayment.Location = new System.Drawing.Point(762, 18);
-            this.txtPayment.Name = "txtPayment";
-            this.txtPayment.ReadOnly = true;
-            this.txtPayment.Size = new System.Drawing.Size(147, 22);
-            this.txtPayment.TabIndex = 0;
             // 
             // panel3
             // 
@@ -168,14 +185,14 @@
             // 
             this.dataGridViewX2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewX2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewX2.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewX2.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewX2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewX2.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dataGridViewX2.Location = new System.Drawing.Point(0, 0);
@@ -198,14 +215,14 @@
             // 
             this.dataGridViewX1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewX1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewX1.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewX1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewX1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewX1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dataGridViewX1.Location = new System.Drawing.Point(0, 0);
@@ -214,22 +231,6 @@
             this.dataGridViewX1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewX1.Size = new System.Drawing.Size(463, 372);
             this.dataGridViewX1.TabIndex = 5;
-            // 
-            // labelX1
-            // 
-            this.labelX1.Location = new System.Drawing.Point(24, 19);
-            this.labelX1.Name = "labelX1";
-            this.labelX1.Size = new System.Drawing.Size(75, 23);
-            this.labelX1.TabIndex = 1;
-            this.labelX1.Text = "Tìm Kiếm";
-            // 
-            // labelX2
-            // 
-            this.labelX2.Location = new System.Drawing.Point(363, 19);
-            this.labelX2.Name = "labelX2";
-            this.labelX2.Size = new System.Drawing.Size(75, 23);
-            this.labelX2.TabIndex = 11;
-            this.labelX2.Text = "Khuyến Mãi";
             // 
             // MySecondCustmControl
             // 
@@ -245,6 +246,7 @@
             this.Name = "MySecondCustmControl";
             this.Size = new System.Drawing.Size(1089, 500);
             this.panel2.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewX2)).EndInit();
             this.panel4.ResumeLayout(false);

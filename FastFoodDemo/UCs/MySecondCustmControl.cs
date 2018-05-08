@@ -69,8 +69,6 @@ namespace FastFoodDemo
 
         private void btnPayment_Click(object sender, EventArgs e)
         {
-
-         
             DateTime dt = (DateTime.Parse(DateTime.Now.ToShortDateString()));
             // thêm bill rồi thêm billdetails theo id
             int idEmployee = 3;
