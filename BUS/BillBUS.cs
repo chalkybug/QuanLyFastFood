@@ -51,10 +51,12 @@ namespace BUS
             foreach (DataRow item in dt.Rows)
             {
                 string idCoupon = item["idCoupon"].ToString();
-                int coupon = int.Parse( CouponDAO.Instance.GetValueByID(idCoupon));
-                int valueTongTien =int.Parse( item["TongTien"].ToString());
-                item["TongTien"] = valueTongTien - (valueTongTien * coupon / 100);
-
+                if (idCoupon != "")
+                {
+                    int coupon = int.Parse(CouponDAO.Instance.GetValueByID(idCoupon));
+                    int valueTongTien = int.Parse(item["TongTien"].ToString());
+                    item["TongTien"] = valueTongTien - (valueTongTien * coupon / 100);
+                }
 
             }
 

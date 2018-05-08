@@ -79,8 +79,11 @@ namespace DAO
             DataTable dt = DataProvider.Instance.ExecuteQuery(query);
             foreach (DataRow item in dt.Rows)
             {
+               
                 coupon = new Coupon(item);
+
             }
+         
             return coupon.value;
         }
 
